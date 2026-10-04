@@ -1,0 +1,18 @@
+{
+  "official_test_used": false,
+  "three_class_names": [
+    "normal",
+    "bacteria",
+    "virus"
+  ],
+  "three_class_counts_csv": "d:\\Pneum Det\\outputs\\phase10\\three_class_fold_counts.csv",
+  "lung_crop_samples_csv": "d:\\Pneum Det\\outputs\\phase10\\lung_crop_samples.csv",
+  "lung_unet_trained": false,
+  "lung_unet_note": "U-Net architecture is implemented; training requires an external lung-mask dataset (e.g. Montgomery/Shenzhen). Heuristic Otsu crops are a shortcut-reduction prototype only.",
+  "torchxrayvision_available": false,
+  "external_dataset": null,
+  "torchscript": "d:\\Pneum Det\\outputs\\phase10\\export\\densenet121_untrained.pt",
+  "onnx": null,
+  "demo_instructions": "d:\\Pneum Det\\outputs\\phase10\\demo_launch.txt",
+  "mean_mask_coverage": 0.32372795007652916
+}

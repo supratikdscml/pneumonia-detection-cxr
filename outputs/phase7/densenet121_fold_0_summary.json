@@ -1,0 +1,109 @@
+{
+  "model": "densenet121",
+  "fold": 0,
+  "validation_images": 1010,
+  "official_test_used": false,
+  "threshold": 0.2342295769188382,
+  "error_examples_per_category": 8,
+  "error_category_counts": {
+    "TP": 8,
+    "TN": 8,
+    "FP": 8,
+    "FN": 8
+  },
+  "error_by_pneumonia_subtype": [
+    {
+      "subtype": "bacteria",
+      "pneumonia_images": 497,
+      "true_positives": 479,
+      "false_negatives": 18,
+      "sensitivity": 0.9637826961770624
+    },
+    {
+      "subtype": "virus",
+      "pneumonia_images": 245,
+      "true_positives": 226,
+      "false_negatives": 19,
+      "sensitivity": 0.9224489795918367
+    }
+  ],
+  "border_shortcut_heuristic_flagged_examples": 4,
+  "border_shortcut_heuristic_total_cam_examples": 32,
+  "border_shortcut_note": "Border activation is a heuristic only, not an anatomical lung mask. Manually inspect CAM overlays for borders, corners, text, and markers before drawing shortcut-learning conclusions.",
+  "robustness": [
+    {
+      "condition": "original_validation",
+      "threshold": 0.2342295769188382,
+      "accuracy": 0.9504950495049505,
+      "precision": 0.9818941504178273,
+      "sensitivity": 0.9501347708894878,
+      "specificity": 0.9514925373134329,
+      "f1": 0.9657534246575342,
+      "auroc": 0.9883986402220702,
+      "auprc": 0.9958494580890578,
+      "true_negative": 255,
+      "false_positive": 13,
+      "false_negative": 37,
+      "true_positive": 705,
+      "auroc_drop": 0.0,
+      "sensitivity_drop": 0.0
+    },
+    {
+      "condition": "gaussian_noise_sigma_0.03",
+      "threshold": 0.2342295769188382,
+      "accuracy": 0.9514851485148514,
+      "precision": 0.9779310344827586,
+      "sensitivity": 0.9555256064690026,
+      "specificity": 0.9402985074626866,
+      "f1": 0.9665985003408316,
+      "auroc": 0.9889015166753832,
+      "auprc": 0.9960626969052622,
+      "true_negative": 252,
+      "false_positive": 16,
+      "false_negative": 33,
+      "true_positive": 709,
+      "auroc_drop": -0.0005028764533129282,
+      "sensitivity_drop": -0.005390835579514808
+    },
+    {
+      "condition": "contrast_0.7",
+      "threshold": 0.2342295769188382,
+      "accuracy": 0.9554455445544554,
+      "precision": 0.965287049399199,
+      "sensitivity": 0.9743935309973046,
+      "specificity": 0.9029850746268657,
+      "f1": 0.9698189134808853,
+      "auroc": 0.9877901597135615,
+      "auprc": 0.9955657200235004,
+      "true_negative": 242,
+      "false_positive": 26,
+      "false_negative": 19,
+      "true_positive": 723,
+      "auroc_drop": 0.0006084805085087019,
+      "sensitivity_drop": -0.0242587601078168
+    },
+    {
+      "condition": "center_crop_90pct",
+      "threshold": 0.2342295769188382,
+      "accuracy": 0.9613861386138614,
+      "precision": 0.9705488621151271,
+      "sensitivity": 0.977088948787062,
+      "specificity": 0.917910447761194,
+      "f1": 0.9738079247817327,
+      "auroc": 0.9911292593635597,
+      "auprc": 0.9968422774227017,
+      "true_negative": 246,
+      "false_positive": 22,
+      "false_negative": 17,
+      "true_positive": 725,
+      "auroc_drop": -0.002730619141489421,
+      "sensitivity_drop": -0.02695417789757415
+    }
+  ],
+  "artifacts": {
+    "gradcam_examples": "D:\\Pneum Det\\outputs\\phase7\\densenet121_fold_0_gradcam_examples.png",
+    "cam_review_csv": "D:\\Pneum Det\\outputs\\phase7\\densenet121_fold_0_cam_review.csv",
+    "subtype_errors_csv": "D:\\Pneum Det\\outputs\\phase7\\densenet121_fold_0_subtype_errors.csv",
+    "robustness_csv": "D:\\Pneum Det\\outputs\\phase7\\densenet121_fold_0_robustness.csv"
+  }
+}

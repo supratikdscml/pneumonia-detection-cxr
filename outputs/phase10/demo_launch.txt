@@ -1,0 +1,2 @@
+python -m pneum_det.demo_app --checkpoint outputs/checkpoints/densenet121_fold_0/best.pt
+Requires a Phase 5/8 frozen checkpoint. Do not point the demo at official test images.

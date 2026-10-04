@@ -1,0 +1,29 @@
+{
+  "model_selection": "densenet121_fold_0_single",
+  "official_test_used": false,
+  "n_validation_images": 5232,
+  "pooled_oof_auroc": 0.9970489677018696,
+  "pooled_oof_auprc": 0.9990042332563684,
+  "target_sensitivity": 0.95,
+  "threshold": 0.8069681287278616,
+  "metrics_at_selected_threshold": {
+    "threshold": 0.8069681287278616,
+    "accuracy": 0.9602446483180428,
+    "precision": 0.996219281663516,
+    "sensitivity": 0.9500386299253155,
+    "specificity": 0.9896219421793921,
+    "f1": 0.9725810703928289,
+    "auroc": 0.9970489677018696,
+    "auprc": 0.9990042332563684,
+    "true_negative": 1335,
+    "false_positive": 14,
+    "false_negative": 194,
+    "true_positive": 3689
+  },
+  "temperature": 1.608001555621404,
+  "ece_before": 0.02492576135894178,
+  "ece_after": 0.033026362546452174,
+  "tta_angles": [
+    0
+  ]
+}

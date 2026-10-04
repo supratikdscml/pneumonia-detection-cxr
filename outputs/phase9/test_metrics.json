@@ -1,0 +1,83 @@
+{
+  "selection_manifest": "outputs\\phase9\\final_selection.json",
+  "models": [
+    {
+      "model_name": "densenet121",
+      "checkpoint": "D:\\Pneum Det\\outputs\\checkpoints\\densenet121_full_cv\\fold_0\\best.pt",
+      "weight": 1.0
+    }
+  ],
+  "selected_on": "validation",
+  "official_test_used": true,
+  "test_images": 624,
+  "test_patient_groups": 408,
+  "threshold": 0.8069681287278616,
+  "temperature": 1.608001555621404,
+  "tta_angles": [
+    0.0
+  ],
+  "metrics_at_frozen_threshold": {
+    "threshold": 0.8069681287278616,
+    "accuracy": 0.9423076923076923,
+    "precision": 0.9214285714285714,
+    "sensitivity": 0.9923076923076923,
+    "specificity": 0.8589743589743589,
+    "f1": 0.9555555555555556,
+    "auroc": 0.9823416611878151,
+    "auprc": 0.9785083328195197,
+    "true_negative": 201,
+    "false_positive": 33,
+    "false_negative": 3,
+    "true_positive": 387
+  },
+  "patient_grouped_bootstrap_95_percent_ci": {
+    "accuracy": {
+      "lower": 0.9226886325707788,
+      "upper": 0.9596808470858055,
+      "valid_resamples": 1000
+    },
+    "precision": {
+      "lower": 0.8907947567312234,
+      "upper": 0.9467081101312311,
+      "valid_resamples": 1000
+    },
+    "sensitivity": {
+      "lower": 0.9826059782608696,
+      "upper": 1.0,
+      "valid_resamples": 1000
+    },
+    "specificity": {
+      "lower": 0.8149569845435987,
+      "upper": 0.9029738890948572,
+      "valid_resamples": 1000
+    },
+    "f1": {
+      "lower": 0.9380040295134635,
+      "upper": 0.9695494727113505,
+      "valid_resamples": 1000
+    },
+    "auroc": {
+      "lower": 0.9705120075053225,
+      "upper": 0.992054124724261,
+      "valid_resamples": 1000
+    },
+    "auprc": {
+      "lower": 0.9527792812292002,
+      "upper": 0.9951351466740852,
+      "valid_resamples": 1000
+    }
+  },
+  "calibration": {
+    "nll_before": 0.30378840352103786,
+    "nll_after": 0.2098859153543884,
+    "ece_before": 0.062252757699074984,
+    "ece_after": 0.05684308973999519
+  },
+  "distribution_shift": {
+    "development_pneumonia_prevalence": 0.7421636085626911,
+    "official_test_pneumonia_prevalence": 0.625,
+    "test_minus_development_prevalence": -0.11716360856269115
+  },
+  "device": "cuda",
+  "predictions_csv": "D:\\Pneum Det\\outputs\\phase9\\test_predictions.csv"
+}

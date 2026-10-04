@@ -1,0 +1,145 @@
+seed: 42
+
+preprocessing:
+  image_size: 224
+  clahe:
+    enabled: false
+    clip_limit: 2.0
+    tile_grid_size: [8, 8]
+  augmentation:
+    crop_scale: [0.85, 1.0]
+    crop_ratio: [0.9, 1.8]
+    rotation_degrees: 10
+    translation_fraction: 0.04
+    brightness: 0.08
+    contrast: 0.08
+
+phase4:
+  fold: 0
+  head_dropout: 0.2
+  pretrained: true
+  hog:
+    image_size: 128
+    block_size: [16, 16]
+    block_stride: [8, 8]
+    cell_size: [8, 8]
+    bins: 9
+    logistic:
+      c: 1.0
+      class_weight: balanced
+      max_iter: 300
+  neural_pilots:
+    - model_name: custom_cnn
+      pretrained: false
+      freeze_backbone: false
+      batch_size: 16
+      backbone_learning_rate: 0.001
+      head_learning_rate: 0.001
+      mixed_precision: true
+    - model_name: resnet50
+      pretrained: true
+      freeze_backbone: true
+      batch_size: 16
+      backbone_learning_rate: 0.00001
+      head_learning_rate: 0.0001
+      mixed_precision: true
+    - model_name: densenet121
+      pretrained: true
+      freeze_backbone: true
+      batch_size: 16
+      backbone_learning_rate: 0.00001
+      head_learning_rate: 0.0001
+      mixed_precision: true
+    - model_name: efficientnet_b0
+      pretrained: true
+      freeze_backbone: true
+      batch_size: 16
+      backbone_learning_rate: 0.00001
+      head_learning_rate: 0.0001
+      mixed_precision: true
+    - model_name: resnet50
+      pretrained: true
+      freeze_backbone: false
+      batch_size: 8
+      backbone_learning_rate: 0.00001
+      head_learning_rate: 0.0001
+      mixed_precision: true
+    - model_name: densenet121
+      pretrained: true
+      freeze_backbone: false
+      batch_size: 8
+      backbone_learning_rate: 0.00001
+      head_learning_rate: 0.0001
+      mixed_precision: true
+    - model_name: efficientnet_b0
+      pretrained: true
+      freeze_backbone: false
+      batch_size: 16
+      backbone_learning_rate: 0.00001
+      head_learning_rate: 0.0001
+      mixed_precision: true
+    - model_name: convnext_tiny
+      pretrained: true
+      freeze_backbone: false
+      batch_size: 4
+      backbone_learning_rate: 0.00001
+      head_learning_rate: 0.0001
+      mixed_precision: true
+    - model_name: vit_b_16
+      pretrained: true
+      freeze_backbone: false
+      batch_size: 4
+      backbone_learning_rate: 0.00001
+      head_learning_rate: 0.0001
+      mixed_precision: true
+
+training:
+  pretrained: true
+  epochs: 20
+  patience: 5
+  min_delta: 0.0001
+  batch_size: 16
+  batch_sizes:
+    convnext_tiny: 4
+    vit_b_16: 4
+  num_workers: 0
+  loss: bce_with_logits
+  focal_alpha: 0.75
+  focal_gamma: 2.0
+  label_smoothing: 0.0
+  weighted_random_sampler: false
+  learning_rate:
+    backbone: 0.00001
+    head: 0.0001
+    custom_cnn: 0.001
+  weight_decay: 0.01
+  scheduler: cosine
+  min_learning_rate: 0.000001
+  mixed_precision: true
+  gradient_clip_norm: 1.0
+
+evaluation:
+  default_threshold: 0.5
+  target_sensitivity: 0.95
+  calibration_bins: 15
+  bootstrap_resamples: 1000
+
+phase8:
+  models: [convnext_tiny, densenet121, vit_b_16]
+  tta_angles: [-5, 0, 5]
+  stacking_holdout_splits: 2
+
+tracking:
+  enabled: false
+  backend: wandb
+  project: pneumonia-dl
+
+phase10:
+  three_class: true
+  lung_crop:
+    use_unet: false
+    padding_fraction: 0.05
+  torchxrayvision: false
+  external_root: data/external
+  export:
+    image_size: 224

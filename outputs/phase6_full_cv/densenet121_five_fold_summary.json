@@ -1,0 +1,198 @@
+{
+  "model": "densenet121",
+  "evaluation": "five-fold grouped out-of-fold validation",
+  "epochs_completed_by_fold": [
+    17,
+    10,
+    14,
+    16,
+    14
+  ],
+  "fold_metrics": [
+    {
+      "fold": 0,
+      "validation_images": 1010,
+      "patient_groups": 545,
+      "best_checkpoint": "D:\\Pneum Det\\outputs\\checkpoints\\densenet121_full_cv\\fold_0\\best.pt",
+      "default_threshold": 0.5,
+      "default_auroc": 0.9968369071086616,
+      "default_auprc": 0.9988867569747538,
+      "default_accuracy": 0.9772277227722772,
+      "default_precision": 0.9891156462585035,
+      "default_sensitivity": 0.9797843665768194,
+      "default_specificity": 0.9701492537313433,
+      "default_f1": 0.984427894380501,
+      "sensitivity_target_threshold": 0.9558029524371424,
+      "sensitivity_at_selected_threshold": 0.9501347708894878,
+      "specificity_at_selected_threshold": 0.9925373134328358,
+      "f1_at_selected_threshold": 0.9730848861283644,
+      "temperature": 1.7101568735836918,
+      "ece_before": 0.020599684518177747,
+      "ece_after": 0.024351541962349926,
+      "auroc_ci_lower": 0.9944108551766472,
+      "auroc_ci_upper": 0.9985821088273389,
+      "official_test_used": false
+    },
+    {
+      "fold": 1,
+      "validation_images": 1029,
+      "patient_groups": 543,
+      "best_checkpoint": "D:\\Pneum Det\\outputs\\checkpoints\\densenet121_full_cv\\fold_1\\best.pt",
+      "default_threshold": 0.5,
+      "default_auroc": 0.9977436823104693,
+      "default_auprc": 0.999144680764497,
+      "default_accuracy": 0.9387755102040817,
+      "default_precision": 0.99568345323741,
+      "default_sensitivity": 0.9202127659574468,
+      "default_specificity": 0.9891696750902527,
+      "default_f1": 0.9564616447823082,
+      "sensitivity_target_threshold": 0.19238729744338778,
+      "sensitivity_at_selected_threshold": 0.9507978723404256,
+      "specificity_at_selected_threshold": 0.9891696750902527,
+      "f1_at_selected_threshold": 0.9727891156462585,
+      "temperature": 1.5599206636671377,
+      "ece_before": 0.059557652247229816,
+      "ece_after": 0.07335004785301627,
+      "auroc_ci_lower": 0.995843098184071,
+      "auroc_ci_upper": 0.999221474467355,
+      "official_test_used": false
+    },
+    {
+      "fold": 2,
+      "validation_images": 1056,
+      "patient_groups": 543,
+      "best_checkpoint": "D:\\Pneum Det\\outputs\\checkpoints\\densenet121_full_cv\\fold_2\\best.pt",
+      "default_threshold": 0.5,
+      "default_auroc": 0.995833786011535,
+      "default_auprc": 0.9986888315668095,
+      "default_accuracy": 0.9772727272727273,
+      "default_precision": 0.9922580645161291,
+      "default_sensitivity": 0.97712833545108,
+      "default_specificity": 0.9776951672862454,
+      "default_f1": 0.9846350832266325,
+      "sensitivity_target_threshold": 0.9337960542258501,
+      "sensitivity_at_selected_threshold": 0.9504447268106735,
+      "specificity_at_selected_threshold": 0.9925650557620818,
+      "f1_at_selected_threshold": 0.9733246584255042,
+      "temperature": 1.7083250226665971,
+      "ece_before": 0.018870611281085706,
+      "ece_after": 0.023224131587086794,
+      "auroc_ci_lower": 0.992329421070068,
+      "auroc_ci_upper": 0.9983786876511311,
+      "official_test_used": false
+    },
+    {
+      "fold": 3,
+      "validation_images": 1081,
+      "patient_groups": 544,
+      "best_checkpoint": "D:\\Pneum Det\\outputs\\checkpoints\\densenet121_full_cv\\fold_3\\best.pt",
+      "default_threshold": 0.5,
+      "default_auroc": 0.9987389191795557,
+      "default_auprc": 0.9995958073606287,
+      "default_accuracy": 0.9750231267345051,
+      "default_precision": 0.9974811083123426,
+      "default_sensitivity": 0.9694002447980417,
+      "default_specificity": 0.9924242424242424,
+      "default_f1": 0.9832402234636871,
+      "sensitivity_target_threshold": 0.812726997326156,
+      "sensitivity_at_selected_threshold": 0.9510403916768666,
+      "specificity_at_selected_threshold": 0.9962121212121212,
+      "f1_at_selected_threshold": 0.974294670846395,
+      "temperature": 1.671184488350191,
+      "ece_before": 0.02710611214234437,
+      "ece_after": 0.03719483111146357,
+      "auroc_ci_lower": 0.9976413697318541,
+      "auroc_ci_upper": 0.9995920607544554,
+      "official_test_used": false
+    },
+    {
+      "fold": 4,
+      "validation_images": 1056,
+      "patient_groups": 543,
+      "best_checkpoint": "D:\\Pneum Det\\outputs\\checkpoints\\densenet121_full_cv\\fold_4\\best.pt",
+      "default_threshold": 0.5,
+      "default_auroc": 0.9990269584224505,
+      "default_auprc": 0.9996698059550222,
+      "default_accuracy": 0.9829545454545454,
+      "default_precision": 0.9935649935649936,
+      "default_sensitivity": 0.9834394904458599,
+      "default_specificity": 0.981549815498155,
+      "default_f1": 0.9884763124199744,
+      "sensitivity_target_threshold": 0.9776833668968136,
+      "sensitivity_at_selected_threshold": 0.9503184713375796,
+      "specificity_at_selected_threshold": 1.0,
+      "f1_at_selected_threshold": 0.9745264532984977,
+      "temperature": 1.3702390506893622,
+      "ece_before": 0.013331390742135964,
+      "ece_after": 0.0159113928320833,
+      "auroc_ci_lower": 0.9981637049633448,
+      "auroc_ci_upper": 0.999615420338867,
+      "official_test_used": false
+    }
+  ],
+  "fold_mean_and_sample_std_at_default_threshold": {
+    "auroc": {
+      "mean": 0.9976360506065344,
+      "std_sample": 0.001327527422127978
+    },
+    "auprc": {
+      "mean": 0.9991971765243424,
+      "std_sample": 0.0004300627337379459
+    },
+    "accuracy": {
+      "mean": 0.9702507264876274,
+      "std_sample": 0.017838434858042946
+    },
+    "precision": {
+      "mean": 0.9936206531778758,
+      "std_sample": 0.003213763025180339
+    },
+    "sensitivity": {
+      "mean": 0.9659930406458495,
+      "std_sample": 0.02610563474921764
+    },
+    "specificity": {
+      "mean": 0.9821976308060478,
+      "std_sample": 0.008930960464094324
+    },
+    "f1": {
+      "mean": 0.9794482316546207,
+      "std_sample": 0.012999702788119306
+    }
+  },
+  "fold_mean_and_sample_std_at_fold_specific_validation_thresholds": {
+    "sensitivity": {
+      "mean": 0.9505472466110068,
+      "std_sample": 0.00036707968081303813
+    },
+    "specificity": {
+      "mean": 0.9940968330994583,
+      "std_sample": 0.004134523935859669
+    },
+    "f1": {
+      "mean": 0.9736039568690039,
+      "std_sample": 0.0007647701833895823
+    }
+  },
+  "pooled_out_of_fold_at_fixed_threshold_0_5": {
+    "n_validation_images": 5232,
+    "threshold": 0.5,
+    "accuracy": 0.9703746177370031,
+    "precision": 0.9936440677966102,
+    "sensitivity": 0.9662631985578162,
+    "specificity": 0.9822090437361009,
+    "f1": 0.9797623710667189,
+    "auroc": 0.9970489677018696,
+    "auprc": 0.9990042332563684,
+    "confusion_matrix": {
+      "true_negative": 1325,
+      "false_positive": 24,
+      "false_negative": 131,
+      "true_positive": 3752
+    },
+    "interpretation": "Descriptive pooled out-of-fold validation results at the preconfigured fixed threshold 0.5; predictions come from five separately trained fold models. Fold-wise metrics are primary because score scales vary."
+  },
+  "threshold_calibration_caveat": "Per-fold sensitivity thresholds and temperatures were fitted on that fold validation data. The wide threshold range indicates score-scale variation. These estimates are descriptive, not a final selection; freeze threshold/calibration by a documented development-only procedure before any official-test access.",
+  "official_test_used": false,
+  "official_test_evaluation_authorized": false
+}

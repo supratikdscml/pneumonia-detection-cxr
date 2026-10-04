@@ -1,0 +1,22 @@
+{
+  "selection_status": "frozen",
+  "selected_on": "validation",
+  "threshold_source": "validation",
+  "temperature_source": "validation",
+  "final_training_confirmed": true,
+  "kind": "single",
+  "threshold": 0.8069681287278616,
+  "temperature": 1.608001555621404,
+  "tta_angles": [
+    0
+  ],
+  "validation_report": "outputs/phase9/validation_selection_report.json",
+  "models": [
+    {
+      "model_name": "densenet121",
+      "checkpoint": "outputs/checkpoints/densenet121_full_cv/fold_0/best.pt",
+      "fold": 0,
+      "weight": 1.0
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv/
+
+# Raw datasets (never commit patient images)
+data/
+archive/
+archive.zip
+
+# Model Checkpoints and Weights
+outputs/checkpoints/
+*.pt
+*.pth
+*.onnx
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Locks
+FINAL_TEST_STARTED.lock

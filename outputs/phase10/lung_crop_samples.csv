@@ -1,0 +1,7 @@
+path,split,subtype,mask_source,mask_coverage,cropped_height,cropped_width
+d:\Pneum Det\archive\chest_xray\chest_xray\train\NORMAL\IM-0115-0001.jpeg,train,normal,heuristic_otsu,0.24988257168020353,1858,2090
+d:\Pneum Det\archive\chest_xray\chest_xray\train\NORMAL\IM-0117-0001.jpeg,train,normal,heuristic_otsu,0.48955403187998126,1152,1422
+d:\Pneum Det\archive\chest_xray\chest_xray\train\PNEUMONIA\person1000_bacteria_2931.jpeg,train,bacteria,heuristic_otsu,0.336617096125731,760,1152
+d:\Pneum Det\archive\chest_xray\chest_xray\train\PNEUMONIA\person1000_virus_1681.jpeg,train,virus,heuristic_otsu,0.2875745782804726,768,1072
+d:\Pneum Det\archive\chest_xray\chest_xray\train\PNEUMONIA\person1001_bacteria_2932.jpeg,train,bacteria,heuristic_otsu,0.32300767903782884,863,1244
+d:\Pneum Det\archive\chest_xray\chest_xray\train\PNEUMONIA\person1003_virus_1685.jpeg,train,virus,heuristic_otsu,0.25573174345495775,616,1008

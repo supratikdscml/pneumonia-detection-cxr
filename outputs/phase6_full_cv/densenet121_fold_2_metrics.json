@@ -1,0 +1,112 @@
+{
+  "model": "densenet121",
+  "fold": 2,
+  "n_validation_images": 1056,
+  "n_validation_patient_groups": 543,
+  "official_test_used": false,
+  "default_threshold_metrics": {
+    "threshold": 0.5,
+    "accuracy": 0.9772727272727273,
+    "precision": 0.9922580645161291,
+    "sensitivity": 0.97712833545108,
+    "specificity": 0.9776951672862454,
+    "f1": 0.9846350832266325,
+    "auroc": 0.995833786011535,
+    "auprc": 0.9986888315668095,
+    "true_negative": 263,
+    "false_positive": 6,
+    "false_negative": 18,
+    "true_positive": 769
+  },
+  "target_sensitivity": 0.95,
+  "selected_threshold_metrics": {
+    "threshold": 0.9337960542258501,
+    "accuracy": 0.9611742424242424,
+    "precision": 0.9973333333333333,
+    "sensitivity": 0.9504447268106735,
+    "specificity": 0.9925650557620818,
+    "f1": 0.9733246584255042,
+    "auroc": 0.995833786011535,
+    "auprc": 0.9986888315668095,
+    "true_negative": 267,
+    "false_positive": 2,
+    "false_negative": 39,
+    "true_positive": 748
+  },
+  "calibration": {
+    "temperature": 1.7083250226665971,
+    "nll_before": 0.10142674428338623,
+    "nll_after": 0.07957796023181615,
+    "ece_before": 0.018870611281085706,
+    "ece_after": 0.023224131587086794
+  },
+  "bootstrap_95_percent_ci_patient_grouped": {
+    "accuracy": {
+      "lower": 0.9482104395513362,
+      "upper": 0.9713183552352691,
+      "valid_resamples": 1000
+    },
+    "precision": {
+      "lower": 0.9924428478742081,
+      "upper": 1.0,
+      "valid_resamples": 1000
+    },
+    "sensitivity": {
+      "lower": 0.9350031245203587,
+      "upper": 0.9641101307711416,
+      "valid_resamples": 1000
+    },
+    "specificity": {
+      "lower": 0.9786270983213429,
+      "upper": 1.0,
+      "valid_resamples": 1000
+    },
+    "f1": {
+      "lower": 0.9645640009927382,
+      "upper": 0.9805356469718555,
+      "valid_resamples": 1000
+    },
+    "auroc": {
+      "lower": 0.992329421070068,
+      "upper": 0.9983786876511311,
+      "valid_resamples": 1000
+    },
+    "auprc": {
+      "lower": 0.9975523231656024,
+      "upper": 0.9994696965751664,
+      "valid_resamples": 1000
+    }
+  },
+  "checkpoint": "D:\\Pneum Det\\outputs\\checkpoints\\densenet121_full_cv\\fold_2\\best.pt",
+  "device": "cuda",
+  "predictions_csv": "D:\\Pneum Det\\outputs\\phase6_full_cv\\densenet121_fold_2_predictions.csv",
+  "available_fold_summary": {
+    "n_folds": 3,
+    "metrics": {
+      "auroc": {
+        "mean": 0.996804791810222,
+        "std": 0.0009553530826171383
+      },
+      "auprc": {
+        "mean": 0.9989067564353534,
+        "std": 0.00022858172843927973
+      },
+      "accuracy": {
+        "mean": 0.9612292297013957,
+        "std": 0.00013789856272742188
+      },
+      "sensitivity": {
+        "mean": 0.9504591233468623,
+        "std": 0.0003317850640845782
+      },
+      "specificity": {
+        "mean": 0.9914240147617234,
+        "std": 0.0019523647008136344
+      },
+      "f1": {
+        "mean": 0.9730662200667091,
+        "std": 0.00026825889266499705
+      }
+    }
+  }
+}
